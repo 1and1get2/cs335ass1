@@ -105,7 +105,6 @@ public class MainActivity extends FragmentActivity implements
 		});
 		refresher(ELEMENT_ID.ALL_ELEMENTS);
 
-
 		mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 		mViewPager = (ViewPager) findViewById(R.id.pager);
 		mViewPager.setAdapter(mSectionsPagerAdapter);

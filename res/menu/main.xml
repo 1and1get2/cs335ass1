@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/staff_activity"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/title_activity_staff"/>
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/refresh"
+        android:showAsAction="ifRoom"
+        android:title="@string/action_refresh"/>
+    <item
+        android:id="@+id/action_quit"
+        android:title="EXIT"
+        android:showAsAction="never"/>
+
+</menu>

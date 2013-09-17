@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">CS Home</string>
+    <string name="welcome">Department of\n\nComputer Science</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="title_activity_retrive_courses">RetriveCoursesActivity</string>
+    <string name="title_activity_retrive_news">RetriveNewsActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_news_rss">news</string>
+    <string name="title_courses_rss">courses</string>
+    <string name="title_events_rss">events</string>
+    <string name="title_seminars_rss">seminars</string>
+    <string name="title_activity_staff">Staff</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+</resources>

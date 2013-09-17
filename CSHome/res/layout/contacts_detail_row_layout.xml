@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp" >
+
+    <RelationLayout
+        android:id="@+id/contact_detail_photo_layout"
+        android:layout_width="60dp"
+        android:layout_height="90dp" >
+
+        <ImageView
+            android:id="@+id/contact_detail_photo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/download" />
+
+        <ProgressBar
+            android:id="@+id/contact_detail_loadingPanel"
+            style="@android:style/Widget.Holo.Light.ProgressBar.Large"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+    </RelationLayout>
+
+    <LinearLayout
+        android:id="@+id/contact_detail_text_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/contact_detail_photo_layout"
+        android:layout_alignTop="@id/contact_detail_photo_layout"
+        android:layout_toRightOf="@id/contact_detail_photo_layout"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/contact_detail_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="contact_detail_text_label" />
+
+        <!--
+             <TextView
+            android:id="@+id/contact_detail_text_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="contact_detail_text_name" />
+
+        <TextView
+            android:id="@+id/contact_detail_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="contact_detail_text_email" />
+
+        <TextView
+            android:id="@+id/contact_detail_text_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="contact_detail_text_phone" />
+
+        <TextView
+            android:id="@+id/contact_detail_text_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="contact_detail_text_link" />
+        -->
+    </LinearLayout>
+
+</RelativeLayout>

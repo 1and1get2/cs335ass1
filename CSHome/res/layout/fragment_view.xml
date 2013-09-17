@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutMode="opticalBounds"
+    android:orientation="vertical" >
+
+<!--     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/square_border_for_frag_view"
+        android:text="My text with lines above and below" /> -->
+
+    <ListView
+        android:id="@+id/newsListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:alpha="0.8"
+        android:background="#ffffff"
+        android:contentDescription="news feeded"
+        android:divider="@color/black_overlay"
+        android:dividerHeight="3dp"
+        android:drawSelectorOnTop="true"
+        android:fadingEdge="vertical|none"
+        android:fadingEdgeLength="20dp"
+        android:headerDividersEnabled="true"
+        android:padding="3dp"
+        android:textAlignment="inherit"
+        android:transcriptMode="normal" >
+
+    </ListView>
+
+</RelativeLayout>

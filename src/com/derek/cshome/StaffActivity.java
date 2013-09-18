@@ -453,7 +453,7 @@ public class StaffActivity extends ListActivity implements OnItemClickListener, 
 		@Override
 		public View getView(int position, View convertView, ViewGroup parent) {
 			View rowView = convertView;
-			if (rowView == null) {
+			if (rowView == null || true) {
 				LayoutInflater inflater = (LayoutInflater) getContext()
 						.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 				rowView = inflater.inflate(R.layout.contacts_detail_row_layout,

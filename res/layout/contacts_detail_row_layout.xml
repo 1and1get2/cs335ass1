@@ -5,7 +5,7 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp" >
 
-    <RelationLayout
+    <FrameLayout
         android:id="@+id/contact_detail_photo_layout"
         android:layout_width="60dp"
         android:layout_height="90dp" >
@@ -16,14 +16,8 @@
             android:layout_height="match_parent"
             android:src="@drawable/download" />
 
-        <ProgressBar
-            android:id="@+id/contact_detail_loadingPanel"
-            style="@android:style/Widget.Holo.Light.ProgressBar.Large"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:visibility="gone" />
-    </RelationLayout>
+
+    </FrameLayout>
 
     <LinearLayout
         android:id="@+id/contact_detail_text_field"

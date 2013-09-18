@@ -20,6 +20,7 @@ import java.util.List;
 import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.Attributes;
+import org.xml.sax.ErrorHandler;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import org.xml.sax.XMLReader;
@@ -154,6 +155,7 @@ public class RssRetriverBase<T> extends Fragment {
 	public void refresh() {
 		rssService.execute(url);
 	}
+	
 
 	public class RssService extends AsyncTask<String, Integer, List<HashMap<String, String>>> {
 		private List<T> itemList;
@@ -177,6 +179,33 @@ public class RssRetriverBase<T> extends Fragment {
 		// moved to contentHandler
 		// protected List<HashMap<String, String>> getItemListMap(List<T>
 		// iteList);
+/*		ErrorHandler myErrorHandler = new ErrorHandler()
+		{
+		    public void fatalError(SAXParseException exception)
+		    throws SAXException
+		    {
+		        System.err.println("fatalError: " + exception);
+		    }
+		    
+		    public void error(SAXParseException exception)
+		    throws SAXException
+		    {
+		        System.err.println("error: " + exception);
+		    }
+
+		    public void warning(SAXParseException exception)
+		    throws SAXException
+		    {
+		        System.err.println("warning: " + exception);
+		    }
+		};*/
+
+//		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+//		dbf.setNamespaceAware(true);
+//		dbf.setValidating(true);
+//		DocumentBuilder db = dbf.newDocumentBuilder();
+//		db.setErrorHandler(myErrorHandler);
+		
 		@Override
 		protected List<HashMap<String, String>> doInBackground(String... params) {
 			Log.d(TAG, "do in background");
@@ -184,7 +213,9 @@ public class RssRetriverBase<T> extends Fragment {
 			MyContentHandler myContentHandler;
 
 			try {
-				xmlReader = saxPF.newSAXParser().getXMLReader();
+//				xmlReader = saxPF.newSAXParser().getXMLReader();
+				xmlReader = SAXParserFactory.newInstance().newSAXParser().getXMLReader();
+				
 				// MyContentHandler myContentHandler = new MyContentHandler(
 				// params[0], retriver_id);
 				myContentHandler = (retriver_id == ELEMENT_ID.COURSES_RSS_ID ? new MyCoursesContentHandler(

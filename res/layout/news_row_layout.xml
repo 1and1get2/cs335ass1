@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
@@ -24,6 +25,71 @@
         android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/newsRowLayoutTitle"
         android:layout_margin="6dip"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="pubDate"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/newsRowLayoutDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="26dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/newsRowLayoutIcon"
+        android:scrollHorizontally="false"
+        android:scrollbars="none"
+        android:text="Description"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/newsRowLayoutTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/newsRowLayoutDescription"
+        android:layout_alignParentTop="true"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_toLeftOf="@+id/newsRowLayoutPubDate"
+        android:layout_toRightOf="@id/newsRowLayoutIcon"
+        android:ellipsize="marquee"
+        android:gravity="center_vertical"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:scrollbars="none"
+        android:singleLine="true"
+        android:text="Example application"
+        android:textSize="15sp" />
+    <TextView 
+        android:id="@+id/newsRowLayoutEndDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+</RelativeLayout> -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:layout_margin="10dip"
+    android:alpha="1"
+    android:padding="8dip" >
+
+    <ImageView
+        android:id="@+id/newsRowLayoutIcon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="6dip"
+        android:contentDescription="news icon"
+        android:src="@drawable/rss_icon" />
+
+    <TextView
+        android:id="@+id/newsRowLayoutPubDate"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/newsRowLayoutTitle"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/newsRowLayoutTitle"
         android:ellipsize="marquee"
         android:singleLine="true"
         android:text="pubDate"

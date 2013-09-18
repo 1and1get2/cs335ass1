@@ -120,9 +120,10 @@ public class StaffActivity extends ListActivity implements OnItemClickListener, 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
 		// TODO Auto-generated method stub
-		Log.d("StaffActivity", "received url request on arg2=" + arg2 + "\n" + staffList.get(arg2).getName());
+		
 		String url ;
 		if ((url = staffList.get(arg2).getUrl()) != null && !url.trim().equals("")){
+			Log.d("StaffActivity", "received url request on arg2=" + arg2 + "\n" + staffList.get(arg2).getName());
 			Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri
 					.parse(url));
 			startActivity(browserIntent);

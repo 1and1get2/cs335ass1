@@ -121,7 +121,7 @@ public class MyContentHandler extends DefaultHandler {
 		} else if (localName.equals("link")) {
 			item.setLink(str);
 		} else if (localName.equals("description")) {
-			item.setDescription(str);
+			if (item.getDescription() == null || item.getDescription().trim().equals("")) item.setDescription(str);
 		} else if (localName.equals("guid")) {
 			item.setGuid(str);
 		} else if (localName.equals("pubDate")) {
@@ -141,7 +141,7 @@ public class MyContentHandler extends DefaultHandler {
 		super.characters(ch, start, length);
 		Log.v(TAG,
 				"characters " + new String(ch).substring(start, start + length));
-		str = new String(ch).substring(start, start + length);
+		str += new String(ch).substring(start, start + length);
 	}
 
 	@Override

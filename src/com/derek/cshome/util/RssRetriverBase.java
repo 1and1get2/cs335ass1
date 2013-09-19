@@ -106,7 +106,7 @@ public class RssRetriverBase<T> extends Fragment {
 			url = COURSES_RSS_URL;
 			break;
 		case EVENTS_RSS_ID:
-			url = ERROR_RSS_URL;//EVENT_RSS_URL;
+			url = EVENT_RSS_URL;//ERROR_RSS_URL;//EVENT_RSS_URL;
 			break;
 		case SEMINORS_RSS_ID:
 			url = SEMINARS_RSS_URL;
